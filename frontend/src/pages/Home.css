@@ -1,0 +1,94 @@
+/* ============================================
+   HOME PAGE STYLES
+   ============================================ */
+
+.main-content {
+  min-height: 100vh;
+  padding-top: 80px;
+}
+
+/* Dashboard Section */
+.dashboard-section {
+  padding: 4rem 1.5rem;
+  background: linear-gradient(135deg, #F8FAFC 0%, #EFF6FF 100%);
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+/* Upload Section */
+.upload-section {
+  padding: 4rem 1.5rem;
+  background: var(--bg-primary);
+}
+
+/* History Section */
+.history-section {
+  padding: 4rem 1.5rem;
+  background: linear-gradient(135deg, #F5F3FF 0%, #F8FAFC 100%);
+}
+
+/* Analytics Section */
+.analytics-section {
+  padding: 4rem 1.5rem;
+  background: var(--bg-primary);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .dashboard-section,
+  .upload-section,
+  .history-section,
+  .analytics-section {
+    padding: 3rem 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-content {
+    padding-top: 70px;
+  }
+
+  .dashboard-section,
+  .upload-section,
+  .history-section,
+  .analytics-section {
+    padding: 2rem 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .dashboard-section,
+  .upload-section,
+  .history-section,
+  .analytics-section {
+    padding: 1.5rem 1rem;
+  }
+}
+
+/* Dark Theme */
+body.dark-theme .dashboard-section {
+  background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%);
+}
+
+body.dark-theme .upload-section {
+  background: #0f172a;
+}
+
+body.dark-theme .history-section {
+  background: linear-gradient(135deg, #1e1b4b 0%, #0f172a 100%);
+}
+
+body.dark-theme .analytics-section {
+  background: #0f172a;
+}

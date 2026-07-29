@@ -1,0 +1,64 @@
+# ==========================
+# Python
+# ==========================
+__pycache__/
+*.py[cod]
+
+# ==========================
+# Virtual Environments
+# ==========================
+venv/
+.venv/
+env/
+
+training/venv/
+backend/venv/
+
+# ==========================
+# IDE
+# ==========================
+.vscode/
+.idea/
+
+# ==========================
+# Node / React
+# ==========================
+node_modules/
+frontend/node_modules/
+frontend/dist/
+dist/
+
+# ==========================
+# Environment
+# ==========================
+.env
+.env.*
+
+# ==========================
+# Logs
+# ==========================
+*.log
+
+# ==========================
+# Dataset (IGNORE)
+# ==========================
+training/models/dataset/
+training/dataset/
+
+# ==========================
+# Keep Trained Models
+# ==========================
+!backend/models/best_emotion_model.pth
+!training/models/models/best_emotion_model.pth
+
+# ==========================
+# Backend Runtime Files
+# ==========================
+backend/uploads/
+backend/history.json
+
+# ==========================
+# OS
+# ==========================
+.DS_Store
+Thumbs.db

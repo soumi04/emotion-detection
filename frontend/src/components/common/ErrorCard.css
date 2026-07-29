@@ -1,0 +1,125 @@
+/* ============================================
+   ERROR CARD STYLES
+   ============================================ */
+
+.error-card {
+  background: var(--glass-bg);
+  backdrop-filter: blur(20px);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-2xl);
+  padding: 2rem;
+  box-shadow: var(--glass-shadow);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.error-card:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-4px);
+}
+
+.error-icon {
+  font-size: 3rem;
+  opacity: 0.8;
+}
+
+.error-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.error-description {
+  font-size: 0.9375rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  max-width: 400px;
+  margin: 0;
+}
+
+.error-retry-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.875rem 1.5rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  border: none;
+  border-radius: var(--radius-lg);
+  background: var(--gradient-primary);
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: var(--shadow-md);
+  margin-top: 0.5rem;
+}
+
+.error-retry-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .error-card {
+    padding: 1.5rem;
+  }
+
+  .error-icon {
+    font-size: 2.5rem;
+  }
+
+  .error-title {
+    font-size: 1.125rem;
+  }
+
+  .error-description {
+    font-size: 0.875rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .error-card {
+    padding: 1.25rem;
+  }
+
+  .error-icon {
+    font-size: 2rem;
+  }
+
+  .error-title {
+    font-size: 1rem;
+  }
+
+  .error-description {
+    font-size: 0.8125rem;
+  }
+
+  .error-retry-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* Dark Theme */
+body.dark-theme .error-card {
+  background: rgba(30, 41, 59, 0.9);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+body.dark-theme .error-title {
+  color: #f1f5f9;
+}
+
+body.dark-theme .error-description {
+  color: #94a3b8;
+}
+
+body.dark-theme .error-retry-btn {
+  background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+}
