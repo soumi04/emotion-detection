@@ -106,14 +106,17 @@ function Home() {
           <div className="container">
             <div className="dashboard-grid">
               <CameraCard onCapture={handleImageUpload} />
-              <PredictionCard prediction={prediction} isLoading={isLoading} />
+              <PredictionCard prediction={prediction} isLoading={isLoading} error={error} />
             </div>
           </div>
         </section>
 
         <section className="upload-section" id="image-detection">
           <div className="container">
-            <UploadCard onUpload={handleImageUpload} />
+            <div className="dashboard-grid">
+              <UploadCard onUpload={handleImageUpload} />
+              <PredictionCard prediction={prediction} isLoading={isLoading} error={error} />
+            </div>
           </div>
         </section>
 

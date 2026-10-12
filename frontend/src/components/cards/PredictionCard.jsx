@@ -22,7 +22,7 @@ const emotionEmojis = {
   Disgust: '🤢'
 };
 
-const PredictionCard = ({ prediction = null, isLoading = false }) => {
+const PredictionCard = ({ prediction = null, isLoading = false, error = null }) => {
   if (isLoading) {
     return (
       <motion.div
@@ -40,6 +40,29 @@ const PredictionCard = ({ prediction = null, isLoading = false }) => {
         <div className="prediction-loading">
           <div className="loading-spinner"></div>
           <p className="loading-text">Analyzing facial features...</p>
+        </div>
+      </motion.div>
+    );
+  }
+
+  if (error) {
+    return (
+      <motion.div
+        className="prediction-card empty"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+      >
+        <div className="prediction-header">
+          <div className="prediction-title">
+            <FaBrain className="title-icon" />
+            <h3>Prediction Error</h3>
+          </div>
+        </div>
+        <div className="prediction-empty">
+          <div className="empty-icon" style={{ fontSize: '3rem', color: '#ef4444' }}>❌</div>
+          <p className="empty-text">Detection Failed</p>
+          <p className="empty-subtext">{error}</p>
         </div>
       </motion.div>
     );
